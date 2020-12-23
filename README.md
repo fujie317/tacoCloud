@@ -5,8 +5,8 @@ I will try out various spring modules:
 2. MVC
 3. Security
 4. JPA
-  - Hibernate
-  - JDBC
+	- Hibernate
+	- JDBC
 5. Thymeleaf
 6. Logging
 
