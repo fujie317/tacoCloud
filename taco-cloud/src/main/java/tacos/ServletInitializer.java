@@ -7,6 +7,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
+ * Turn this into a web application
+ * 
  * @author Fujie Zhang
  *
  */
