@@ -61,7 +61,7 @@ public class WebConfig
     public MessageSource messageSource()
     {
         ReloadableResourceBundleMessageSource msgSrc = new ReloadableResourceBundleMessageSource();
-        msgSrc.setBasename("classpath:i18n/messages");
+        msgSrc.setBasenames("classpath:i18n/ValidationMessages", "classpath:messages");
         msgSrc.setDefaultEncoding("UTF-8");
         return msgSrc;
     }

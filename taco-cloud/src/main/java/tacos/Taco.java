@@ -1,5 +1,6 @@
 package tacos;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.constraints.NotNull;
@@ -17,10 +18,14 @@ import lombok.NoArgsConstructor;
 public class Taco
 {
 
+    private Long id;
+
     @NotNull
     @Size(min = 5, message = "Name must be at least 5 characters long")
     private String name;
 
     @Size(min = 1, message = "You must choose at least one ingredient")
     private List<Ingredient> ingredients;
+
+    private Date createdAt;
 }
