@@ -2,7 +2,6 @@ package tacos;
 
 import java.util.Locale;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,23 +18,21 @@ import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 /**
- * 
+ * Main web configurations for validators, intercepters, formatters, locale resolvers, etc.
  * @author Fujie Zhang
  *
  */
 @Configuration
-@EnableWebMvc
-public class WebConfig
+//@EnableWebMvc   // do NOT use this as it would mess up static resource mapping in the 'resources/static' folder under thymeleaf
+public class AppMvcConfig
     implements WebMvcConfigurer
 {
-    @Autowired
-    private MessageSource messageSource;
 
     @Bean
     public LocalValidatorFactoryBean validator()
     {
         LocalValidatorFactoryBean validatorFactoryBean = new LocalValidatorFactoryBean();
-        validatorFactoryBean.setValidationMessageSource(messageSource);
+        validatorFactoryBean.setValidationMessageSource(messageSource());
 
         return validatorFactoryBean;
     }

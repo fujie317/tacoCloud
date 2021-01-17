@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class WebConfigTest
-    extends WebConfig
+class AppMvcConfigTest
+    extends AppMvcConfig
 {
 
     @Test
